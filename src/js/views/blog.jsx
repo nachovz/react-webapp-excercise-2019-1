@@ -103,6 +103,14 @@ export class Blog extends React.Component {
 							</svg>
 						</div>
 					</div>
+					<div className="container">
+						<div className="row no-gutters">
+							<div className="col-12 col-sm-6 col-md-8">
+								.col-12 .col-sm-6 .col-md-8
+							</div>
+							<div class="col-6 col-md-4">.col-6 .col-md-4</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
