@@ -9,6 +9,12 @@ export class Demo extends React.Component {
 	render() {
 		return (
 			<div className="container">
+				<Context.Consumer>
+					{({ store }) => {
+						return store.thingy;
+					}}
+				</Context.Consumer>
+
 				<ul className="list-group">
 					<Context.Consumer>
 						{({ store, actions }) => {
