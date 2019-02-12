@@ -35,6 +35,26 @@ export class Navbar extends React.Component {
 								Check Out
 							</Link>
 						</li>
+						<li className="nav-item">
+							<Link to="/Demo" className="nav-link">
+								Demo
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/Single" className="nav-link">
+								Single
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/Login" className="nav-link">
+								Login
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link to="/StoreView" className="nav-link">
+								StoreView
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>
