@@ -103,6 +103,15 @@ export class Blog extends React.Component {
 							</svg>
 						</div>
 					</div>
+<<<<<<< HEAD
+=======
+					<div className="container">
+						<div className="row no-gutters">
+							<div className="col-12 col-sm-6 col-md-8" />
+							<div className="col-6 col-md-4" />
+						</div>
+					</div>
+>>>>>>> 1d4a5f32c4deeae1895b694034878d58a913d4a7
 				</div>
 				<main role="main" className="container">
 					<div className="row">
@@ -144,6 +153,42 @@ export class Blog extends React.Component {
 										nibh ultricies vehicula ut id elit.
 									</p>
 								</blockquote>
+								<p>
+									Etiam porta
+									<em>sem malesuada magna</em>
+									mollis euismod. Cras mattis consectetur
+									purus sit amet fermentum. Aenean lacinia
+									bibendum nulla sed consectetur.
+								</p>
+								<h2>Heading</h2>
+								<p>
+									Vivamus sagittis lacus vel augue laoreet
+									rutrum faucibus dolor auctor. Duis mollis,
+									est non commodo luctus, nisi erat porttitor
+									ligula, eget lacinia odio sem nec elit.
+									Morbi leo risus, porta ac consectetur ac,
+									vestibulum at eros.
+								</p>
+								<h3>Sub-heading</h3>
+								<p>
+									Cum sociis natoque penatibus et magnis dis
+									parturient montes, nascetur ridiculus mus.
+								</p>
+								<pre>
+									<code>Example code block </code>
+								</pre>
+								<p>
+									Aenean lacinia bibendum nulla sed
+									consectetur. Etiam porta sem malesuada magna
+									mollis euismod. Fusce dapibus, tellus ac
+									cursus commodo, tortor mauris condimentum
+									nibh, ut fermentum massa.
+								</p>
+								<h3>Sub-heading</h3>
+								<p>
+									Cum sociis natoque penatibus et magnis dis
+									parturient montes, nascetur ridiculus mus.
+								</p>
 							</div>
 						</div>
 					</div>
