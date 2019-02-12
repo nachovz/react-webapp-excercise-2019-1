@@ -9,6 +9,7 @@ import { Login } from "./views/login.jsx";
 import { Blog } from "./views/blog.jsx";
 import { StoreView } from "./views/storeView.jsx";
 import { Checkout } from "./views/checkout.jsx";
+import { Cover } from "./views/cover.jsx";
 
 import Store from "./store/appContext.jsx";
 
@@ -30,6 +31,7 @@ export class Layout extends React.Component {
 						<Route path="/blog" component={Blog} />
 						<Route path="/store" component={StoreView} />
 						<Route path="/checkout" component={Checkout} />
+						<Route path="/cover" component={Cover} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
