@@ -7,7 +7,6 @@ export class StoreView extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
 				<div className="container-fluid">
 					<div className="jumbotron mb-0">
 						<h1 className="display-4 text-center">Hello, world!</h1>
@@ -88,7 +87,6 @@ export class StoreView extends React.Component {
 						</div>
 					</div>
 				</div>
-				<Footer />
 			</div>
 		);
 	}
