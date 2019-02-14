@@ -1,4 +1,6 @@
 import React from "react";
+import { CartItem } from "../component/cartItem.jsx";
+import { Context } from "../store/appContext.jsx";
 
 export class Checkout extends React.Component {
 	render() {
@@ -328,33 +330,18 @@ export class Checkout extends React.Component {
 							</span>
 						</h4>
 						<ul className="list-group mb-3">
-							<li className="list-group-item d-flex justify-content-between lh-condensed">
-								<div>
-									<h6 className="my-0">Product name</h6>
-									<small className="text-muted">
-										Brief description
-									</small>
-								</div>
-								<span className="text-muted">$12</span>
-							</li>
-							<li className="list-group-item d-flex justify-content-between lh-condensed">
-								<div>
-									<h6 className="my-0">Second product</h6>
-									<small className="text-muted">
-										Brief description
-									</small>
-								</div>
-								<span className="text-muted">$8</span>
-							</li>
-							<li className="list-group-item d-flex justify-content-between lh-condensed">
-								<div>
-									<h6 className="my-0">Third item</h6>
-									<small className="text-muted">
-										Brief decription
-									</small>
-								</div>
-								<span className="text-muted">$5</span>
-							</li>
+							<Context.Consumer>
+								{({ store }) => {
+									return (
+										<CartItem
+											title="HOLA"
+											description="HHHHHHHH"
+											cost={2314}
+										/>
+									);
+								}}
+							</Context.Consumer>
+
 							<li className="list-group-item d-flex justify-content-between bg-light">
 								<div className="text-success">
 									<h6 className="my-0">Promo Code</h6>
