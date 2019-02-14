@@ -2,7 +2,9 @@ import React from "react";
 import Cards from "../component/cards.jsx";
 import Navbar from "../component/navbar.jsx";
 import Footer from "../component/footer.jsx";
+
 import { Context } from "../store/appContext.jsx";
+
 
 export class StoreView extends React.Component {
 	constructor(props) {
