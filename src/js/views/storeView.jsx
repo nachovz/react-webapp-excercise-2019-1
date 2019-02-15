@@ -5,7 +5,6 @@ import Footer from "../component/footer.jsx";
 
 import { Context } from "../store/appContext.jsx";
 
-
 export class StoreView extends React.Component {
 	constructor(props) {
 		super(props);
