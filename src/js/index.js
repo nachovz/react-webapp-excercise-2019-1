@@ -13,3 +13,5 @@ import Layout from "./layout.jsx";
 
 //render your react application
 ReactDOM.render(<Layout />, document.querySelector("#app"));
+
+ReactDOM.render(<Carousel />, document.getElementById("container"));
