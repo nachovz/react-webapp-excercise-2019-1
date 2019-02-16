@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../component/cards.jsx";
+import Blog from "../component/blog.jsx";
 import Navbar from "../component/navbar.jsx";
 import Footer from "../component/footer.jsx";
 
@@ -29,14 +29,14 @@ export class StoreView extends React.Component {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-dark"
 								shadowColor="bg-light"
 								textColor="text-white"
 							/>
 						</div>
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-dark"
 								textColor="text-black"
@@ -45,13 +45,13 @@ export class StoreView extends React.Component {
 					</div>
 					<div className="row">
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-dark"
 							/>
 						</div>
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-primary"
 								shadowColor="bg-white"
 								textColor="text-white"
@@ -60,13 +60,13 @@ export class StoreView extends React.Component {
 					</div>
 					<div className="row">
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-white"
 							/>
 						</div>
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-white"
 							/>
@@ -74,13 +74,13 @@ export class StoreView extends React.Component {
 					</div>
 					<div className="row">
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-white"
 							/>
 						</div>
 						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Cards
+							<Blog
 								backgroundColor="bg-light"
 								shadowColor="bg-white"
 							/>

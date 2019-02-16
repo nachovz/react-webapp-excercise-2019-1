@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default class Cards extends React.Component {
+export default class Blog extends React.Component {
 	render() {
 		return (
 			<div>
@@ -25,7 +25,7 @@ export default class Cards extends React.Component {
 		);
 	}
 }
-Cards.propTypes = {
+Blog.propTypes = {
 	backgroundColor: PropTypes.string,
 	shadowColor: PropTypes.string,
 	textColor: PropTypes.string

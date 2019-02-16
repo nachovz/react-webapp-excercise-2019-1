@@ -332,13 +332,16 @@ export class Checkout extends React.Component {
 						<ul className="list-group mb-3">
 							<Context.Consumer>
 								{({ store }) => {
-									return (
-										<CartItem
-											title="HOLA"
-											description="HHHHHHHH"
-											cost={2314}
-										/>
-									);
+									return store.cart.map((pp, uu) => {
+										return (
+											<CartItem
+												key={uu}
+												title={pp.product}
+												description={pp.description}
+												cost={pp.price}
+											/>
+										);
+									});
 								}}
 							</Context.Consumer>
 
