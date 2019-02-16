@@ -3,7 +3,21 @@ import Blog from "../component/blog.jsx";
 import Navbar from "../component/navbar.jsx";
 import Footer from "../component/footer.jsx";
 
+import { Context } from "../store/appContext.jsx";
+
 export class StoreView extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			color: [
+				"bg-primary",
+				"bg-light",
+				"bg-info",
+				"bg-secondary",
+				"bg-danger"
+			]
+		};
+	}
 	render() {
 		return (
 			<div>
@@ -28,63 +42,32 @@ export class StoreView extends React.Component {
 				</div>
 				<div className="container-fluid">
 					<div className="row">
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-dark"
-								shadowColor="bg-light"
-								textColor="text-white"
-							/>
-						</div>
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-dark"
-								textColor="text-black"
-							/>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-dark"
-							/>
-						</div>
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-primary"
-								shadowColor="bg-white"
-								textColor="text-white"
-							/>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-white"
-							/>
-						</div>
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-white"
-							/>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-white"
-							/>
-						</div>
-						<div className="col-12 col-md-6 py-0 py-md-2">
-							<Blog
-								backgroundColor="bg-light"
-								shadowColor="bg-white"
-							/>
-						</div>
+						<Context.Consumer>
+							{({ store }) => {
+								return store.products.map((item, index) => {
+									return (
+										<Cards
+											key={index}
+											src={item.image}
+											title={item.name}
+											description={item.description}
+											price={item.price}
+											backgroundColor={[
+												this.state.color[
+													Math.floor(
+														Math.random() *
+															this.state.color
+																.length
+													)
+												]
+											]}
+											textColor=".text-warning"
+											shadowColor="bg-transparent"
+										/>
+									);
+								});
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 			</div>
