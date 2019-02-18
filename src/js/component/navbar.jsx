@@ -60,8 +60,8 @@ export class Navbar extends React.Component {
 						<Context.Consumer>
 							{({ store }) => {
 								return (
-									<li className="nav-item justify-content-end">
-										{store.session[0].username}
+									<li className="nav-item space">
+										Logged in as {store.session[0].username}
 									</li>
 								);
 							}}
