@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.jsx";
 
 export class Navbar extends React.Component {
 	render() {
@@ -51,10 +52,20 @@ export class Navbar extends React.Component {
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="/StoreView" className="nav-link">
+							<Link to="/Store" className="nav-link">
 								StoreView
 							</Link>
 						</li>
+
+						<Context.Consumer>
+							{({ store }) => {
+								return (
+									<li className="nav-item justify-content-end">
+										{store.session[0].username}
+									</li>
+								);
+							}}
+						</Context.Consumer>
 					</ul>
 				</div>
 			</nav>
