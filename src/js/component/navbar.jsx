@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.jsx";
 
 export class Navbar extends React.Component {
 	render() {
@@ -55,6 +56,16 @@ export class Navbar extends React.Component {
 								StoreView
 							</Link>
 						</li>
+
+						<Context.Consumer>
+							{({ store }) => {
+								return (
+									<li className="nav-item space">
+										Logged in as {store.session[0].username}
+									</li>
+								);
+							}}
+						</Context.Consumer>
 					</ul>
 				</div>
 			</nav>

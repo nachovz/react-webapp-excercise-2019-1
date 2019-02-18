@@ -148,7 +148,7 @@ const getState = ({ getStore, setStore }) => {
 
 			session: [
 				{
-					username: "Rigo",
+					username: "Sirdaph",
 					email: "rigocodes@gmail.com"
 				}
 			],
