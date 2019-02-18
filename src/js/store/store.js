@@ -192,12 +192,31 @@ const getState = ({ getStore, setStore }) => {
 				//we have to loop the entire demo array to look for the respective index
 				//and change its color
 				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
+					if (i === index) elm = color;
 					return elm;
 				});
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			changeLogin: () => {
+				const store = getStore();
+				const loginLength = store.session.length;
+				const user = "NachotehSupreme";
+				const emailaddress = "newemailwhodis@gmail.com";
+
+				const newSession = () => {
+					return loginLength != 0
+						? store.session.splice(1, 1)
+						: store.session.push({
+								username: user,
+								email: emailaddress
+						  });
+				};
+
+				//reset the global store
+				setStore({ session: newSession });
 			}
 		}
 	};
