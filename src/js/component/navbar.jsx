@@ -56,20 +56,21 @@ export class Navbar extends React.Component {
 								StoreView
 							</Link>
 						</li>
-
-						<Context.Consumer>
-							{({ store }) => {
-								{
-									return store.session.length != 0 ? (
-										<span>{store.session[0].username}</span>
-									) : (
-										<span className="nav item space">
-											please log in
-										</span>
-									);
-								}
-							}}
-						</Context.Consumer>
+						<li className="nav-item space">
+							<Context.Consumer>
+								{({ store }) => {
+									{
+										return store.session.length != 0 ? (
+											<span>
+												{store.session[0].username}
+											</span>
+										) : (
+											<span>please log in</span>
+										);
+									}
+								}}
+							</Context.Consumer>
+						</li>
 					</ul>
 				</div>
 			</nav>
