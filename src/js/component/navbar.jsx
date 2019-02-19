@@ -65,7 +65,11 @@ export class Navbar extends React.Component {
 												{store.session[0].username}
 											</span>
 										) : (
-											<span>please log in</span>
+											<Link
+												to={"/login"}
+												className="nav-link">
+												<span>Please log in</span>
+											</Link>
 										);
 									}
 								}}
