@@ -34,7 +34,7 @@ export class LoggedIn extends React.Component {
 							<Link to={"/login"}>
 								<button
 									className="btn btn-danger"
-									onClick={() => actions.changeLogin()}>
+									onClick={() => actions.logOut()}>
 									Log Out
 								</button>
 							</Link>
@@ -92,11 +92,13 @@ export class LoggedOut extends React.Component {
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return (
-									<button
-										className="btn btn-primary"
-										onClick={() => actions.changeLogin()}>
-										Log In
-									</button>
+									<Link to={"/login"}>
+										<button
+											className="btn btn-primary"
+											onClick={() => actions.logIn()}>
+											Log In
+										</button>
+									</Link>
 								);
 							}}
 						</Context.Consumer>

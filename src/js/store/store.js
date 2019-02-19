@@ -200,23 +200,31 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 
-			changeLogin: () => {
+			logIn: () => {
 				const store = getStore();
-				const loginLength = store.session.length;
+				var tempSession = store.session;
 				const user = "NachotehSupreme";
 				const emailaddress = "newemailwhodis@gmail.com";
+				tempSession.push({
+					username: user,
+					email: emailaddress
+				});
 
-				const newSession = () => {
-					return loginLength != 0
-						? store.session.splice(1, 1)
-						: store.session.push({
-								username: user,
-								email: emailaddress
-						  });
-				};
+				setStore({ session: tempSession });
+			},
+
+			logOut: () => {
+				const store = getStore();
+				var tempSession = store.session;
+				tempSession = [];
+
+				setStore({ session: tempSession });
+			},
+
+			check: () => {
+				var lmao = /^.{6,}$/;
 
 				//reset the global store
-				setStore({ session: newSession });
 			}
 		}
 	};
