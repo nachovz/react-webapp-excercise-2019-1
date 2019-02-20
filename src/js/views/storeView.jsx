@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../component/cards.jsx";
+import ProductCard from "../component/ProductCard.jsx";
 import Navbar from "../component/navbar.jsx";
 import Footer from "../component/footer.jsx";
 
@@ -46,7 +46,7 @@ export class StoreView extends React.Component {
 							{({ store }) => {
 								return store.products.map((item, index) => {
 									return (
-										<Cards
+										<ProductCard
 											key={index}
 											src={item.image}
 											title={item.name}

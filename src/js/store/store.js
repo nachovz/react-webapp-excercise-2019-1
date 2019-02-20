@@ -152,6 +152,7 @@ const getState = ({ getStore, setStore }) => {
 					email: "rigocodes@gmail.com"
 				}
 			],
+
 			cart: [
 				{
 					product: "Leica Camera",
