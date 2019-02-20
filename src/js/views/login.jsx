@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
+import { Link } from "react-router-dom";
 
 export class Login extends React.Component {
 	render() {
@@ -8,7 +9,7 @@ export class Login extends React.Component {
 			<Context.Consumer>
 				{({ store }) => {
 					{
-						return store.session.length > 0 ? (
+						return store.session.length != 0 ? (
 							<LoggedIn />
 						) : (
 							<LoggedOut />
@@ -25,9 +26,21 @@ export class LoggedIn extends React.Component {
 		return (
 			<div className="justify-content-center text-center">
 				<h1 className="text-center align-items-center">
-					{"You're already loggedin, fool!"}
+					{"You're already logged in, fool!"}
 				</h1>
-				<button onClick={this.handleLogoutClick}>Log Out</button>
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return (
+							<Link to={"/login"}>
+								<button
+									className="btn btn-danger"
+									onClick={() => actions.logOut()}>
+									Log Out
+								</button>
+							</Link>
+						);
+					}}
+				</Context.Consumer>
 			</div>
 		);
 	}
@@ -76,12 +89,19 @@ export class LoggedOut extends React.Component {
 								Remember Me
 							</label>
 						</div>
-						<button
-							className="btn btn-lg btn-primary btn-block justify-content-center"
-							type="submit"
-							onClick={this.handleLoginClick}>
-							Log In
-						</button>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return (
+									<Link to={"/login"}>
+										<button
+											className="btn btn-primary"
+											onClick={() => actions.logIn()}>
+											Log In
+										</button>
+									</Link>
+								);
+							}}
+						</Context.Consumer>
 						<p className="mt-5 text-muted">© 2017-2018</p>
 					</form>
 				</div>

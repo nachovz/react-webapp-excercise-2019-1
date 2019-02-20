@@ -148,7 +148,7 @@ const getState = ({ getStore, setStore }) => {
 
 			session: [
 				{
-					username: "Rigo",
+					username: "Sirdaph",
 					email: "rigocodes@gmail.com"
 				}
 			],
@@ -192,12 +192,39 @@ const getState = ({ getStore, setStore }) => {
 				//we have to loop the entire demo array to look for the respective index
 				//and change its color
 				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
+					if (i === index) elm = color;
 					return elm;
 				});
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			logIn: () => {
+				const store = getStore();
+				var tempSession = store.session;
+				const user = "NachotehSupreme";
+				const emailaddress = "newemailwhodis@gmail.com";
+				tempSession.push({
+					username: user,
+					email: emailaddress
+				});
+
+				setStore({ session: tempSession });
+			},
+
+			logOut: () => {
+				const store = getStore();
+				var tempSession = store.session;
+				tempSession = [];
+
+				setStore({ session: tempSession });
+			},
+
+			check: () => {
+				var lmao = /^.{6,}$/;
+
+				//reset the global store
 			}
 		}
 	};
